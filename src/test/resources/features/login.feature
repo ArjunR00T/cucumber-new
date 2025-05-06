@@ -5,7 +5,7 @@ Feature: User Login Functionality
     Then verify user is on login page
 
   Scenario Outline: Login with valid credentials
-    When user login username "<username>" and password "<password>"
+    When user login username "standard_user" and password "secret_sauce"
     Then verify user is on home page
 
     Examples:
@@ -13,8 +13,8 @@ Feature: User Login Functionality
       | standard_user    | secret_sauce
 
   Scenario Outline: Login with in-valid credentials
-    When user login username "<username>" and password "<password>"
-    Then verify user is on home page
+    When user login username "standard_user" and password "standard_user"
+    Then verify error message is shown
 
     Examples:
       | username         | password

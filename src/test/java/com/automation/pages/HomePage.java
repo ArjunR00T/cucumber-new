@@ -40,6 +40,9 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//button[@id='back-to-products']")
     WebElement backToPro;
 
+    @FindBy(id="react-burger-cross-btn")
+    WebElement cross;
+
     public boolean isHomePageDisplayed() {
         return shoppingCartLink.isDisplayed();
     }
@@ -122,5 +125,9 @@ public class HomePage extends BasePage{
 
     public void clickOnBackToProduct() {
         backToPro.click();
+    }
+
+    public void closeHamburger() {
+        cross.click();
     }
 }

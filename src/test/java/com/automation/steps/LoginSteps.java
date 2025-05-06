@@ -25,4 +25,8 @@ public class LoginSteps {
         loginPage.doLogin(username, password);
     }
 
+    @Then("verify error message is shown")
+    public void verifyErrorMessageIsShown() {
+        Assert.assertTrue(loginPage.isErrorMessageShown());
+    }
 }

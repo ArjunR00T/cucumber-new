@@ -26,7 +26,7 @@ public class CartSteps {
 
     @Then("verify cart is empty")
     public void verifyCartIsEmpty() {
-        Assert.assertTrue(cartPage.isCartEmpty());
+        Assert.assertFalse(cartPage.isCartEmpty());
     }
 
     @Then("the cart should contain {int} items")

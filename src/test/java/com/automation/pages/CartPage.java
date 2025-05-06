@@ -29,11 +29,15 @@ public class CartPage extends BasePage {
     }
 
     public boolean isCartEmpty() {
-            return removeBtn.getFirst().isDisplayed();
+            try{
+                return removeBtn.getFirst().isDisplayed();
+            } catch (Exception e) {
+                return false;
+            }
     }
 
     public boolean cartContains(int qty) {
-            return qty == removeBtn.size()-1;
+            return qty == removeBtn.size();
     }
 
     public boolean ContainMultipleItem() {

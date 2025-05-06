@@ -15,6 +15,9 @@ public class LoginPage extends BasePage{
     @FindBy(id = "login-button")
     WebElement loginBtn;
 
+    @FindBy(xpath = "//h3[@data-test=\"error\"]")
+    WebElement errorMessage;
+
     public void doLogin(String username, String password) {
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
@@ -29,4 +32,7 @@ public class LoginPage extends BasePage{
         return usernameInput.isDisplayed() && passwordInput.isDisplayed();
     }
 
+    public boolean isErrorMessageShown() {
+        return errorMessage.isDisplayed();
+    }
 }

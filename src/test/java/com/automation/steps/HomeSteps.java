@@ -83,4 +83,9 @@ public class HomeSteps {
     public void theUserClicksTheBackButton() {
         homePage.clickOnBackToProduct();
     }
+
+    @Then("user close the hamburger menu")
+    public void userCloseTheHamburgerMenu() {
+        homePage.closeHamburger();
+    }
 }

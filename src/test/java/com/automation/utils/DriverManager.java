@@ -13,7 +13,7 @@ public class DriverManager {
     public static void init(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(ConfigReader.getProperty("application.url"));
     }
 

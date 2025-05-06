@@ -32,4 +32,5 @@ Feature: Shopping Cart Functionality
     Then verify cart icon displays quantity one
     When user click on hamburger button
     Then user click on reset button
+    Then user close the hamburger menu
     And verify cart icon displays quantity one
